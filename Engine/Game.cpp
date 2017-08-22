@@ -1,5 +1,5 @@
-/****************************************************************************************** 
- *	Chili DirectX Framework Version 16.07.20											  *	
+/******************************************************************************************
+ *	Chili DirectX Framework Version 16.07.20											  *
  *	Game.cpp																			  *
  *	Copyright 2016 PlanetChili.net <http://www.planetchili.net>							  *
  *																						  *
@@ -20,19 +20,21 @@
  ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
+#include "SpriteCodex.h"
 
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
 	brd( gfx ),
-	rng( std::random_device()() )
+	rng( std::random_device()() ),
+	snek( {2,2} )
 {
 }
 
 void Game::Go()
 {
-	gfx.BeginFrame();	
+	gfx.BeginFrame();
 	UpdateModel();
 	ComposeFrame();
 	gfx.EndFrame();
@@ -40,18 +42,51 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+    if (!gameIsOver)
+    {
+        if (wnd.kbd.KeyPressed(VK_UP))
+        {
+            delta_loc = {0,-1};
+        }
+        else if (wnd.kbd.KeyPressed(VK_DOWN))
+        {
+            delta_loc = {0,1};
+        }
+        else if (wnd.kbd.KeyPressed(VK_LEFT))
+        {
+            delta_loc = {-1,0};
+        }
+        else if (wnd.kbd.KeyPressed(VK_RIGHT))
+        {
+            delta_loc = {1,0};
+        }
+
+        ++snekMoveCounter;
+        if (snekMoveCounter >= snekMovePeriod)
+        {
+            snekMoveCounter = 0;
+            if (!brd.IsInsideBoard(snek.GetNextHeadLocation(delta_loc)))
+            {
+                gameIsOver = true;
+            }
+            else
+            {
+                if wnd.kbd.KeyIsPressed(VK_CONTROL))
+                {
+                    snek.Grow();
+                }
+                snek.MoveBy(delta_loc);
+            }
+        }
+    }
+
 }
 
 void Game::ComposeFrame()
 {
-	std::uniform_int_distribution<int> colorDist(0, 255);
-	for (int y = 0; y < brd.GetGridHeight(); y++)
-	{
-		for (int x = 0; x < brd.GetGridWidth(); x++)
-		{
-			Location loc = { x, y };
-			Color c(colorDist(rng), colorDist(rng), colorDist(rng));
-			brd.DrawCell(loc, c);
-		}
-	}
+	snek.Draw(brd);
+	if (gameIsOver)
+    {
+        SpriteCodex::DrawGameOver(200,200,gfx);
+    }
 }

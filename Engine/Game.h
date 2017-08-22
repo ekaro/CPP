@@ -1,5 +1,5 @@
-/****************************************************************************************** 
- *	Chili DirectX Framework Version 16.07.20											  *	
+/******************************************************************************************
+ *	Chili DirectX Framework Version 16.07.20											  *
  *	Game.h																				  *
  *	Copyright 2016 PlanetChili.net <http://www.planetchili.net>							  *
  *																						  *
@@ -24,6 +24,7 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "Board.h"
+#include "Snake.h"
 #include <random>
 
 class Game
@@ -45,6 +46,11 @@ private:
 	/********************************/
 	/*  User Variables              */
 	Board brd;
+	Snake snek;
+	Location delta_loc = {1,0};
+	static constexpr int snekMovePeriod = 20;
+	int snekMoveCounter = 0;
+	bool gameIsOver = false;
 	std::mt19937 rng;
 	/********************************/
 };

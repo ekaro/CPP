@@ -13,6 +13,7 @@ private:
 		void Follow(const Segment& next);
 		void MoveBy(const Location& delta_loc);
 		void Draw(Board& brd) const;
+		Location GetLocation() const;
 	private:
 		Location loc;
 		Color c;
@@ -22,6 +23,7 @@ public:
 	void MoveBy(const Location& delta_loc);
 	void Grow();
 	void Draw(Board& brd) const;
+	Location GetNextHeadLocation(const Location& delta_loc) const;
 private:
 	static constexpr Color headColor = Colors::Yellow;
 	static constexpr Color bodyColor = Colors::Green;
