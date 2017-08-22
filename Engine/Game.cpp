@@ -44,19 +44,19 @@ void Game::UpdateModel()
 {
     if (!gameIsOver)
     {
-        if (wnd.kbd.KeyPressed(VK_UP))
+        if (wnd.kbd.KeyIsPressed(VK_UP))
         {
             delta_loc = {0,-1};
         }
-        else if (wnd.kbd.KeyPressed(VK_DOWN))
+        else if (wnd.kbd.KeyIsPressed(VK_DOWN))
         {
             delta_loc = {0,1};
         }
-        else if (wnd.kbd.KeyPressed(VK_LEFT))
+        else if (wnd.kbd.KeyIsPressed(VK_LEFT))
         {
             delta_loc = {-1,0};
         }
-        else if (wnd.kbd.KeyPressed(VK_RIGHT))
+        else if (wnd.kbd.KeyIsPressed(VK_RIGHT))
         {
             delta_loc = {1,0};
         }
@@ -71,7 +71,7 @@ void Game::UpdateModel()
             }
             else
             {
-                if wnd.kbd.KeyIsPressed(VK_CONTROL))
+                if (wnd.kbd.KeyIsPressed(VK_CONTROL))
                 {
                     snek.Grow();
                 }

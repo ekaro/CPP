@@ -1,11 +1,14 @@
 ﻿  Board.cpp
+  DXErr.cpp
   Game.cpp
+  Graphics.cpp
+  Keyboard.cpp
   Main.cpp
   MainWindow.cpp
+  Mouse.cpp
   Snake.cpp
+  SpriteCodex.cpp
   Generating code
-  2 of 660 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+  All 576 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Engine.vcxproj -> C:\Users\Marek\Desktop\Chili Framework 2016\Release\Engine.exe

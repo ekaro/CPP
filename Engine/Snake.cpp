@@ -1,12 +1,12 @@
 #include "Snake.h"
 #include <assert.h>
 
-Snake::Snake(const Location & loc)
+Snake::Snake(const Location& loc)
 {
 	segments[0].InitHead(loc);
 }
 
-void Snake::MoveBy(const Location & delta_loc)
+void Snake::MoveBy(const Location& delta_loc)
 {
 	for (int i = nSegments - 1; i > 0; i--)
 	{
@@ -15,7 +15,7 @@ void Snake::MoveBy(const Location & delta_loc)
 	segments[0].MoveBy(delta_loc);
 }
 
-Location Snake::GetNextHeadLocation( const Location& delta_loc) const
+Location Snake::GetNextHeadLocation(const Location& delta_loc) const
 {
     Location l(segments[0].GetLocation());
     l.Add(delta_loc);
@@ -31,7 +31,7 @@ void Snake::Grow()
 	}
 }
 
-void Snake::Draw(Board & brd) const
+void Snake::Draw(Board& brd) const
 {
 	for (int i = 0; i < nSegments; ++i)
 	{
@@ -39,7 +39,7 @@ void Snake::Draw(Board & brd) const
 	}
 }
 
-void Snake::Segment::InitHead(const Location & in_loc)
+void Snake::Segment::InitHead(const Location& in_loc)
 {
 	loc = in_loc;
 	c = Snake::headColor;
