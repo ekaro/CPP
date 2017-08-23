@@ -39,6 +39,30 @@ void Snake::Draw(Board& brd) const
 	}
 }
 
+bool Snake::IsInTileExceptEnd(const Location& target) const
+{
+    for (int i = 0; i < nSegments - 1; ++i)
+    {
+        if (segments[i].GetLocation() == target)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Snake::IsInTile(const Location& target) const
+{
+    for (int i = 0; i < nSegments; ++i)
+    {
+        if (segments[i].GetLocation() == target)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void Snake::Segment::InitHead(const Location& in_loc)
 {
 	loc = in_loc;
@@ -66,7 +90,7 @@ void Snake::Segment::Draw(Board& brd) const
 	brd.DrawCell(loc, c);
 }
 
-Location Snake::Segment::GetLocation() const
+const Location& Snake::Segment::GetLocation() const
 {
     return loc;
 }
