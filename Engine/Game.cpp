@@ -77,6 +77,7 @@ void Game::UpdateModel()
                 if (eating)
                 {
                     snek.Grow();
+					snekMovePeriod--;
                 }
                 snek.MoveBy(delta_loc);
                 if (eating)
@@ -92,7 +93,7 @@ void Game::UpdateModel()
 void Game::ComposeFrame()
 {
 	snek.Draw(brd);
-	goal.Board(brd);
+	goal.Draw(brd);
 	if (gameIsOver)
     {
         SpriteCodex::DrawGameOver(200,200,gfx);
