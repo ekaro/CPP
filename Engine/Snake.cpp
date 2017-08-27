@@ -9,7 +9,7 @@ Snake::Snake(const Location& loc)
 		{10,130,48},
 		{18,160,48},
 		{10,130,48}
-	}
+	};
 
 	for (int i = 0; i < nSegmentsMax; ++i)
 	{
