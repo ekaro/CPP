@@ -1,5 +1,5 @@
-﻿  compilation header save succeeded; see C:\Users\Marek\Desktop\CPP\Engine\FramebufferPS.shh
-  compilation header save succeeded; see C:\Users\Marek\Desktop\CPP\Engine\FramebufferVS.shh
+﻿  compilation header save succeeded; see C:\Users\WRZG406\Desktop\Docs\CPP\program\Engine\FramebufferPS.shh
+  compilation header save succeeded; see C:\Users\WRZG406\Desktop\Docs\CPP\program\Engine\FramebufferVS.shh
   Board.cpp
   DXErr.cpp
   Game.cpp
@@ -11,4 +11,5 @@
   Mouse.cpp
   Snake.cpp
   SpriteCodex.cpp
-c:\users\marek\desktop\cpp\engine\snake.cpp(14): error C2143: syntax error: missing ';' before 'for'
+  Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.exe
+  Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.pdb (Partial PDB)
