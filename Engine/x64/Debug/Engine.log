@@ -1,15 +1,8 @@
-﻿  compilation header save succeeded; see C:\Users\WRZG406\Desktop\Docs\CPP\program\Engine\FramebufferPS.shh
-  compilation header save succeeded; see C:\Users\WRZG406\Desktop\Docs\CPP\program\Engine\FramebufferVS.shh
-  Board.cpp
-  DXErr.cpp
+﻿  Board.cpp
   Game.cpp
   Goal.cpp
-  Graphics.cpp
-  Keyboard.cpp
   Main.cpp
   MainWindow.cpp
-  Mouse.cpp
   Snake.cpp
-  SpriteCodex.cpp
   Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.exe
   Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.pdb (Partial PDB)
