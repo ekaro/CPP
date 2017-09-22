@@ -1,8 +1,3 @@
 ﻿  Board.cpp
-  Game.cpp
-  Goal.cpp
-  Main.cpp
-  MainWindow.cpp
-  Snake.cpp
-  Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.exe
-  Engine.vcxproj -> C:\Users\WRZG406\Desktop\Docs\CPP\program\x64\Debug\Engine.pdb (Partial PDB)
+  Engine.vcxproj -> C:\Users\Marek\Desktop\CPP\Snake\x64\Debug\Engine.exe
+  Engine.vcxproj -> C:\Users\Marek\Desktop\CPP\Snake\x64\Debug\Engine.pdb (Partial PDB)
