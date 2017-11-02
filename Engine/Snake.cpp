@@ -92,3 +92,8 @@ const Location& Snake::Segment::GetLocation() const
 {
     return loc;
 }
+
+int Snake::GetLength() const
+{
+	return segments.size();
+}
